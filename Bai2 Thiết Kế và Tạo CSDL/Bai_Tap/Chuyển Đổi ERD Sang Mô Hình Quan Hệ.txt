@@ -1,0 +1,31 @@
+B1: Xác định các thực thể có trong mô hinh ERD
+	- PHIEUXUAT
+	- VATTU
+	- PHIEUNHAP
+	- DONDH
+	- NHACC
+B2: Xác định các mối quan hệ -1, 1-n, n-n giữa các thực thể để sinh ra các trường, các bảng tương ứng
+	* PHIEUXUAT - VATTU
+		- Phiếu xuất có (n) Vật tư
+		- Vật tư có (n) Phiếu xuất
+	* VATTU - DONDH
+		- Vật tư có (n) Đơn đặt hàng
+		- Đơn đặt hàng có (n) Vật tư
+	* VATTU - PHIEUNHAP
+		- Vật tư có (n) Phiếu nhập
+		- Phiếu nhập có (n) Vật tư
+	* DONDH - NHACC
+		- Đơn đặt hàng có (n) Nhà cung cấp
+		- Nhà cung cấp có (1) Đơn đặt hàng
+B3: Xác định tính đa trị và tạo thành bảng mới
+	Bảng mới: Quản Lý Hàng (QUANLYHANG) và Quản Lý Kho (QUANLYKHO)
+	QUANLYHANG (MaVTU,SoDH,MaNCC,LuuY) trong đó MaVTU, SoDH, MaNCC là khoá ngoại dựa trên bảng VATTU,DONDH,NHACC
+	QUANLYKHO  (SoPX,SoPN,LuuY) trong đó SoPX và SoPN là khoá ngoại đựa trên bảng PHIEUXUAT và PHIEUNHAP
+B4: Liệt kê lại danh sách các bảng sau khi chuyển đổi xong
+	- PHIEUXUAT
+	- VATTU
+	- PHIEUNHAP
+	- DONDH
+	- NHACC
+	- QUANLYHANG
+	- QUANLYKHO 
